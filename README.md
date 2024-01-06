@@ -44,8 +44,3 @@ This project is licensed under the [GNU GPL v3.0 License](LICENSE).
 ## Author
 
 - [riviox](https://github.com/riviox)
-
-## Acknowledgments
-
-Special thanks to the creators of wxPython and PowerShell for making this project possible.
-
