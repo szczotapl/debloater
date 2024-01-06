@@ -92,10 +92,13 @@ all_apps = sorted(set([
     "Microsoft.MicrosoftWhiteboard", # Microsoft Whiteboard
     "Microsoft.MicrosoftEdge.Stable", # Microsoft Edge Stable
     "Microsoft.Windows.HolographicFirstRun",  # Holographic First Run
+    "Microsoft.OneDrive",             # OneDrive
 ]))
+
+
 
 if __name__ == '__main__':
     app = wx.App(False)
-    frame = AppDebloaterFrame(None, title='App Debloater', size=(400, 800))
+    frame = AppDebloaterFrame(None, title='Windows Debloater by riviox', size=(400, 800))
     frame.Show()
     app.MainLoop()
