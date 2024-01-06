@@ -16,6 +16,12 @@ This is a simple Windows Debloater application created using wxPython and PowerS
 - wxPython (install using `pip install wxPython`)
 
 ## Usage
+
+## Easy way
+1. Download exe from repo
+2. Run exe
+
+### Advanced way
 1. Download Zip or `git clone https://github.com/riviox/debloater.git`
 2. Run the application by executing the script: `python debloater.py` or [build exe](build.bat).
 3. Select the action (Remove or Install).
