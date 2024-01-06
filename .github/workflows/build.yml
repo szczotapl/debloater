@@ -1,4 +1,4 @@
-name: Build
+name: Build Debloater
 
 on:
   push:
@@ -28,9 +28,18 @@ jobs:
         pyinstaller --onefile src\debloater.py
       shell: powershell
 
-    - name: Clean up
-      run: Remove-Item -Recurse -Force build, dist, debloater.spec
-      shell: powershell
+    - name: Create GitHub Release
+            id: create_release
+            uses: actions/create-release@v1
+            env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            with:
+              tag_name: ${{ github.sha }}
+              release_name: Release ${{ github.sha }}
+              body: |
+                Auto-Generated release with exe.
+              draft: false
+              prerelease: false
 
     - name: Done
       run: Write-Host "Build completed successfully!"
