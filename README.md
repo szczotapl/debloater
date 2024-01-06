@@ -16,12 +16,12 @@ This is a simple Windows Debloater application created using wxPython and PowerS
 - wxPython (install using `pip install wxPython`)
 
 ## Usage
-
-1. Run the application by executing the script: `python app_debloater.py`.
-2. Select the action (Remove or Install).
-3. Check the apps you want to toggle.
-4. Click the "Toggle Selected Apps" button.
-5. A message box will notify you about the status of the operation.
+1. Download Zip or `git clone https://github.com/riviox/debloater.git`
+2. Run the application by executing the script: `python debloater.py` or [build exe](build.bat).
+3. Select the action (Remove or Install).
+4. Check the apps you want to toggle.
+5. Click the "Toggle Selected Apps" button.
+6. A message box will notify you about the status of the operation.
 
 ## Important Note
 
