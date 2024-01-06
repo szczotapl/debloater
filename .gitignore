@@ -1,5 +1,1 @@
-*.log
-*.exe
-*.spec
-build
-dist
+private

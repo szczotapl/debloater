@@ -1,0 +1,37 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - name: Install dependencies
+      run: |
+        pip install pyinstaller wxPython
+      shell: powershell
+
+    - name: Build executable
+      run: |
+        pyinstaller --onefile src\debloater.py
+      shell: powershell
+
+    - name: Clean up
+      run: Remove-Item -Recurse -Force build, dist, debloater.spec
+      shell: powershell
+
+    - name: Done
+      run: Write-Host "Build completed successfully!"
+      shell: powershell
